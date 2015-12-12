@@ -1,4 +1,4 @@
-val days = List("mon", "tue", "wed", "thu", "fri")
+val days: List[String] = List("mon", "tue", "wed", "thu", "fri")
 
 // [v2.11.7]
 // List(sun, mon, tue, wed, thu, fri)
