@@ -87,6 +87,14 @@ days.foreach { d => d + " " }
 days.map(_.toUpperCase)
 
 // [v2.11.7]
+// "one"
+// "two"
+List(1, 2) map {
+  case 1 => "one"
+  case 2 => "two"
+}
+
+// [v2.11.7]
 // mon_tue_wed_thu_fri
 days.mkString("_")
 
