@@ -1,4 +1,23 @@
 // [v2.11.7]
+// 123
+def lazyVal = 123
+lazyVal
+
+// [v2.11.7]
+// 9
+def getSize(str: String) = str.size
+getSize("something")
+
+// [v2.11.7]
+// 4
+def sum(a: Int, b: Int): Int = {
+  val a2 = a * 2
+  val b2 = b * 2
+  a2 + b2
+}
+sum(1, 1)
+
+// [v2.11.7]
 // SOMETHING
 val f1: String => String = _.toUpperCase
 f1("something")
