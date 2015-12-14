@@ -25,3 +25,9 @@ something % 10
 // Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
 1 to something
 1 until something
+
+// [v2.11.7]
+// bigSomething: BigInt = 131 ->
+//   bigSomething: Int = 131
+val bigSomething: BigInt = 131
+bigSomething.intValue
