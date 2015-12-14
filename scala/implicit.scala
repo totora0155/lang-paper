@@ -23,5 +23,5 @@ implicit object IntCalc extends Calc[Int] {
   def add(a: Int, b: Int): Int = a + b
 }
 def sum[A](val1: A, val2: A)(implicit c: Calc[A]): A = c.add(val1, val2)
-println(sum(1, 2))
-println(sum("a", "b"))
+sum(1, 2)
+sum("a", "b")
