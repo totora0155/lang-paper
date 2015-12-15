@@ -10,4 +10,4 @@ lazy val number = lazyInt
 // [v2.11.7]
 // executed
 // 1
-println(lazyVal)
+println(number)
