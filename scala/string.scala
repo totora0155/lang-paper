@@ -45,3 +45,12 @@ something.toUpperCase.toLowerCase
 // [v2.11.7]
 // something
 "  something   ".trim
+
+// [v2.11.7]
+// s
+// something
+val sb: StringBuilder = new StringBuilder
+sb += 's'
+sb.toString
+sb ++= "omething"
+sb.toString
