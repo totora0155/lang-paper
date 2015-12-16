@@ -24,5 +24,5 @@ people match {
 // john
 // 23
 val People(name, age) = people
-// name
-// age
+name
+age
