@@ -20,11 +20,13 @@ days.size
 
 // [v2.11.7]
 // mon
-// List(tue, wed, thu, fri)
+// fri
 // List(mon, the, wed, thu)
+// List(tue, wed, thu, fri)
 days.head
-days.tail
+days.last
 days.init
+days.tail
 
 // [v2.11.7]
 // List(fri, mon, thu, the, wed)
@@ -76,7 +78,9 @@ days.dropWhile(_.size == 3)
 
 // [v2.11.7]
 // List(mon, thu)
+// List(the, wed, fri)
 days.filter(_.matches("mon|thu"))
+days.filterNot(_.matches("mon|thu"))
 
 // [v2.11.7]
 // mon tue wed thu fri
@@ -93,6 +97,12 @@ List(1, 2) map {
   case 1 => "one"
   case 2 => "two"
 }
+
+// [v2.11.7]
+// 16
+// 26
+List(1, 3, 5, 7).reduceLeft(_ + _)
+List(1, 3, 5, 7).foldLeft(10)(_ + _)
 
 // [v2.11.7]
 // mon_tue_wed_thu_fri
