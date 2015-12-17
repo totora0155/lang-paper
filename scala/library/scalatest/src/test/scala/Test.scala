@@ -1,26 +1,20 @@
 import main.Main
-import collection.mutable.Stack
 import org.scalatest._
 
 class Test extends FlatSpec with Matchers {
 
-  "A Stack" should "pop values in last-in-first-out order" in {
-    val stack = new Stack[Int]
-    stack.push(1)
-    stack.push(2)
-    stack.pop() should be (2)
-    stack.pop() should be (1)
-  }
-
-  it should "throw NoSuchElementException if an empty stack is popped" in {
-    val emptyStack = new Stack[Int]
-    a [NoSuchElementException] should be thrownBy {
-      emptyStack.pop()
-    }
-  }
-
   "class Mains" should "[concatSnake] return *___" in {
     val main = new Main()
     main.concatSnake("a") should be ("a___")
+  }
+
+  "Intercept" should "catch NoSuchElementException" in {
+    val mv = Map("a" -> "b")
+    var flag = false
+    intercept[NoSuchElementException] {
+      mv("c")
+      flag = true
+      flag should be (true)
+    }
   }
 }
