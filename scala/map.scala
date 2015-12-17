@@ -10,7 +10,9 @@ date.get("year")
 date.get("???")
 
 // [v2.11.7]
+// Map(year -> 2099, month -> 1, date -> 1, hour -> 0)
 // Map(min -> 0, year -> 2099, hour -> 1, sec -> 0, date -> 1, month -> 1)
+date + ("hour" -> 0)
 date ++ Map("hour" -> 1, "min" -> 0, "sec" -> 0)
 
 // [v2.11.7]
@@ -19,11 +21,13 @@ date.size
 
 // [v2.11.7]
 // (year, 2099)
-// Map(month -> 1, date -> 1)
+// (date, 1)
 // Map(year -> 2099, month -> 1)
+// Map(month -> 1, date -> 1)
 date.head
-date.tail
+date.last
 date.init
+date.tail
 
 // [v2.11.7]
 // (year, 2099)
@@ -72,3 +76,8 @@ date.isEmpty
 // [v2.11.7]
 // true
 date.contains("year")
+
+// [v2.11.7]
+// Map()
+val emptyMap = scala.collection.mutable.Map.empty[String, Any]
+emptyMap
