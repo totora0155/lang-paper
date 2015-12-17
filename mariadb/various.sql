@@ -103,8 +103,8 @@ update table_01 set name = "modified" where id = 0;
 delete from table_01 where id = 0;
 
 # [v10.1.9]
-trancate table table_01;
 # Empty set
+trancate table table_01;
 
 # [v10.1.9]
 # Empty set
