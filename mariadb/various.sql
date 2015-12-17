@@ -79,8 +79,10 @@ alter table table_01 drop age;
 # | id | name      |
 # +----+-----------+
 # |  0 | something |
+# |  1 | aaa       |
 # +----+-----------+
 insert into table_01 (name) values("something");
+insert into table_01 (name) values("aaa");
 select * from table_01;
 
 # [v10.1.9]
@@ -88,9 +90,23 @@ select * from table_01;
 # | id | name     |
 # +----+----------+
 # |  0 | modified |
+# |  1 | aaa      |
 # +----+----------+
 update table_01 set name = "modified" where id = 0;
 
 # [v10.1.9]
-# Empty set
+# +----+----------+
+# | id | name     |
+# +----+----------+
+# |  1 | aaa      |
+# +----+----------+
 delete from table_01 where id = 0;
+
+# [v10.1.9]
+trancate table table_01;
+# Empty set
+
+# [v10.1.9]
+# Empty set
+drop table if exists table_01;
+show tables;
