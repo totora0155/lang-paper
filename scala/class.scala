@@ -26,3 +26,7 @@ people match {
 val People(name, age) = people
 name
 age
+
+// [v2.11.7]
+// 24
+people.copy(age = 24).age
