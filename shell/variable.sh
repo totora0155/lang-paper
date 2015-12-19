@@ -26,4 +26,5 @@ arr[2]="buz"
 
 IFS=":"
 
-echo "${arr[*]}"
+# foo:bar:buz
+#* "${arr[*]}"
