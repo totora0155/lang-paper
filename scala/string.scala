@@ -62,5 +62,3 @@ val longLine = """
   | some
   | thing
 """.stripMargin
-
-println(longLine)
