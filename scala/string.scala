@@ -54,3 +54,13 @@ sb += 's'
 sb.toString
 sb ++= "omething"
 sb.toString
+
+// [v2.11.7]
+// some
+// thing
+val longLine = """
+  | some
+  | thing
+""".stripMargin
+
+println(longLine)
