@@ -104,7 +104,7 @@ delete from table_01 where id = 0;
 
 # [v10.1.9]
 # Empty set
-trancate table table_01;
+truncate table table_01;
 
 # [v10.1.9]
 # Empty set
